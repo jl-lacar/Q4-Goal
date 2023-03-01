@@ -1,5 +1,14 @@
-import { Box, Grid, GridItem, Heading, HStack, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Heading,
+  HStack,
+  Image,
+  VStack,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { Damage } from "../assets/roleIcons/Damage.icon";
 
 export const Home = () => {
   return (
@@ -7,16 +16,7 @@ export const Home = () => {
       <VStack id="Heroes" spacing={16}>
         <VStack id="DamageHeroes" spacing={4}>
           <HStack spacing={2}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              version="1.1"
-              viewBox="0 0 60.325 60.325"
-              fill="#F06414"
-            >
-              <path d="m36.451 58.73v-9.6006h-12.577v9.6006zm0-12.997v-34.224c0-5.2977-5.0459-9.8967-6.2886-9.8967s-6.2886 4.599-6.2886 9.8967v34.224zm18.777 12.997v-9.6006h-12.577v9.6006zm0-12.997v-34.224c0-5.2977-5.0459-9.8967-6.2886-9.8967s-6.2886 4.599-6.2886 9.8967v34.224zm-37.553 12.997v-9.6006h-12.577v9.6006zm0-12.997v-34.224c0-5.2977-5.0459-9.8967-6.2886-9.8967s-6.2886 4.599-6.2886 9.8967v34.224z" />
-            </svg>
+            <Damage />
             <Heading color={"gray.600"}>DAMAGE</Heading>
           </HStack>
           <Grid templateColumns={"repeat(5, 1fr)"} gap={4}>
@@ -94,6 +94,7 @@ export const Home = () => {
 const AgentCard = () => {
   return (
     <Link to="hero">
+      <Image />
       <GridItem bg="white">Agent Name</GridItem>
     </Link>
   );
